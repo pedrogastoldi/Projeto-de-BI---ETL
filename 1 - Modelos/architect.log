@@ -1,0 +1,449 @@
+0    [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ArchitectUtils  - Log4J configured successfully
+1234 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+1359 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+1359 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+1484 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+4765 [Thread-5] ERROR ca.sqlpower.architect.swingui.action.CheckForUpdateAction  - Fail to retrieve current version number!
+0    [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ArchitectUtils  - Log4J configured successfully
+1156 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+1296 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+1296 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+1407 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+4551 [Thread-5] ERROR ca.sqlpower.architect.swingui.action.CheckForUpdateAction  - Fail to retrieve current version number!
+0    [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ArchitectUtils  - Log4J configured successfully
+1494 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+1651 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+1651 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+1793 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+5155 [Thread-5] ERROR ca.sqlpower.architect.swingui.action.CheckForUpdateAction  - Fail to retrieve current version number!
+0    [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ArchitectUtils  - Log4J configured successfully
+1774 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+1930 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+1930 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+2055 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+5168 [Thread-5] ERROR ca.sqlpower.architect.swingui.action.CheckForUpdateAction  - Fail to retrieve current version number!
+0    [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ArchitectUtils  - Log4J configured successfully
+1161 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+1348 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+1348 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+1458 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+4547 [Thread-5] ERROR ca.sqlpower.architect.swingui.action.CheckForUpdateAction  - Fail to retrieve current version number!
+29026 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+CREATE SEQUENCE public.filial_cod_filial_seq
+29026 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE public.FILIAL (
+                cod_filial INTEGER NOT NULL DEFAULT nextval('public.filial_cod_filial_seq'),
+                CNPJ VARCHAR(20) NOT NULL,
+                nome VARCHAR(50) NOT NULL,
+                CONSTRAINT cod_filial PRIMARY KEY (cod_filial)
+)
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+ALTER SEQUENCE public.filial_cod_filial_seq OWNED BY public.FILIAL.cod_filial
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE SEQUENCE public.endereco_filial_cod_endereco_fil_seq
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE public.ENDERECO_FILIAL (
+                cod_endereco_fil INTEGER NOT NULL DEFAULT nextval('public.endereco_filial_cod_endereco_fil_seq'),
+                tipo_log VARCHAR(10) NOT NULL,
+                logradouro VARCHAR(50) NOT NULL,
+                numero INTEGER NOT NULL,
+                complemento VARCHAR(50) NOT NULL,
+                bairro VARCHAR(50) NOT NULL,
+                UF VARCHAR(2) NOT NULL,
+                CEP VARCHAR(9) NOT NULL,
+                cod_filial INTEGER NOT NULL,
+                CONSTRAINT cod_endereco_fil PRIMARY KEY (cod_endereco_fil)
+)
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+ALTER SEQUENCE public.endereco_filial_cod_endereco_fil_seq OWNED BY public.ENDERECO_FILIAL.cod_endereco_fil
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE SEQUENCE public.telefone_filial_cod_tel_fil_seq
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE public.TELEFONE_FILIAL (
+                cod_tel_fil INTEGER NOT NULL DEFAULT nextval('public.telefone_filial_cod_tel_fil_seq'),
+                DDD INTEGER NOT NULL,
+                telefone VARCHAR(15) NOT NULL,
+                cod_filial INTEGER NOT NULL,
+                CONSTRAINT cod_tel_fil PRIMARY KEY (cod_tel_fil)
+)
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+ALTER SEQUENCE public.telefone_filial_cod_tel_fil_seq OWNED BY public.TELEFONE_FILIAL.cod_tel_fil
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE SEQUENCE public.bicicleta_cod_bicicleta_seq
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE public.BICICLETA (
+                cod_bicicleta INTEGER NOT NULL DEFAULT nextval('public.bicicleta_cod_bicicleta_seq'),
+                vl_hora REAL NOT NULL,
+                marca VARCHAR(50) NOT NULL,
+                modelo VARCHAR(50) NOT NULL,
+                tipo VARCHAR(50) NOT NULL,
+                CONSTRAINT cod_bicicleta PRIMARY KEY (cod_bicicleta)
+)
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+ALTER SEQUENCE public.bicicleta_cod_bicicleta_seq OWNED BY public.BICICLETA.cod_bicicleta
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE public.BICICLETA_FILIAL (
+                qtde_bicicletas INTEGER NOT NULL,
+                cod_filial INTEGER NOT NULL,
+                cod_bicicleta INTEGER NOT NULL
+)
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE SEQUENCE public.pessoa_cod_pessoa_seq
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE public.PESSOA (
+                cod_pessoa INTEGER NOT NULL DEFAULT nextval('public.pessoa_cod_pessoa_seq'),
+                nome VARCHAR(50) NOT NULL,
+                cpf VARCHAR(12) NOT NULL,
+                email VARCHAR(50) NOT NULL,
+                CONSTRAINT cod_pessoa PRIMARY KEY (cod_pessoa)
+)
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+ALTER SEQUENCE public.pessoa_cod_pessoa_seq OWNED BY public.PESSOA.cod_pessoa
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE SEQUENCE public.endereco_pessoa_cod_endereco_pes_seq
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE public.ENDERECO_PESSOA (
+                cod_endereco_pes INTEGER NOT NULL DEFAULT nextval('public.endereco_pessoa_cod_endereco_pes_seq'),
+                tipo_log VARCHAR(10) NOT NULL,
+                logradouro VARCHAR(50) NOT NULL,
+                numero INTEGER NOT NULL,
+                complemento VARCHAR(50) NOT NULL,
+                bairro VARCHAR(50) NOT NULL,
+                UF VARCHAR(2) NOT NULL,
+                CEP VARCHAR(9) NOT NULL,
+                cod_pessoa INTEGER NOT NULL,
+                CONSTRAINT cod_endereco_pes PRIMARY KEY (cod_endereco_pes)
+)
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+ALTER SEQUENCE public.endereco_pessoa_cod_endereco_pes_seq OWNED BY public.ENDERECO_PESSOA.cod_endereco_pes
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE SEQUENCE public.telefone_pessoa_cod_tel_pes_seq
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE public.TELEFONE_PESSOA (
+                cod_tel_pes INTEGER NOT NULL DEFAULT nextval('public.telefone_pessoa_cod_tel_pes_seq'),
+                telefone VARCHAR(15) NOT NULL,
+                DDD INTEGER NOT NULL,
+                cod_pessoa INTEGER NOT NULL,
+                CONSTRAINT cod_tel_pes PRIMARY KEY (cod_tel_pes, telefone)
+)
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+ALTER SEQUENCE public.telefone_pessoa_cod_tel_pes_seq OWNED BY public.TELEFONE_PESSOA.cod_tel_pes
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE SEQUENCE public.funcionario_cod_func_seq
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE public.FUNCIONARIO (
+                cod_func INTEGER NOT NULL DEFAULT nextval('public.funcionario_cod_func_seq'),
+                cod_pessoa INTEGER NOT NULL,
+                cod_filial INTEGER NOT NULL,
+                CONSTRAINT cod_func PRIMARY KEY (cod_func)
+)
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+ALTER SEQUENCE public.funcionario_cod_func_seq OWNED BY public.FUNCIONARIO.cod_func
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE SEQUENCE public.cliente_cod_cli_seq
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE public.CLIENTE (
+                cod_cli INTEGER NOT NULL DEFAULT nextval('public.cliente_cod_cli_seq'),
+                cod_pessoa INTEGER NOT NULL,
+                CONSTRAINT cod_cli PRIMARY KEY (cod_cli)
+)
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+ALTER SEQUENCE public.cliente_cod_cli_seq OWNED BY public.CLIENTE.cod_cli
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE SEQUENCE public.aluga_cod_locacao_seq
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE public.ALUGA (
+                cod_locacao INTEGER NOT NULL DEFAULT nextval('public.aluga_cod_locacao_seq'),
+                dt_locacao DATE NOT NULL,
+                hora_locacao TIME NOT NULL,
+                tempo_locacao INTEGER NOT NULL,
+                desconto INTEGER NOT NULL,
+                cod_cli INTEGER NOT NULL,
+                cod_func INTEGER NOT NULL,
+                cod_bicicleta INTEGER NOT NULL,
+                cod_filial INTEGER NOT NULL,
+                CONSTRAINT cod_locacao PRIMARY KEY (cod_locacao)
+)
+29042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+ALTER SEQUENCE public.aluga_cod_locacao_seq OWNED BY public.ALUGA.cod_locacao
+29057 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE public.TELEFONE_FILIAL ADD CONSTRAINT filial_telefone_filial_fk
+FOREIGN KEY (cod_filial)
+REFERENCES public.FILIAL (cod_filial)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+29057 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE public.ENDERECO_FILIAL ADD CONSTRAINT filial_endereco_pessoa_1_fk
+FOREIGN KEY (cod_filial)
+REFERENCES public.FILIAL (cod_filial)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+29057 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE public.BICICLETA_FILIAL ADD CONSTRAINT filial_bicicleta_filial_fk
+FOREIGN KEY (cod_filial)
+REFERENCES public.FILIAL (cod_filial)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+29057 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE public.FUNCIONARIO ADD CONSTRAINT filial_funcionario_fk
+FOREIGN KEY (cod_filial)
+REFERENCES public.FILIAL (cod_filial)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+29057 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE public.ALUGA ADD CONSTRAINT filial_aluga_fk
+FOREIGN KEY (cod_filial)
+REFERENCES public.FILIAL (cod_filial)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+29057 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE public.BICICLETA_FILIAL ADD CONSTRAINT bicicleta_bicicleta_filial_fk
+FOREIGN KEY (cod_bicicleta)
+REFERENCES public.BICICLETA (cod_bicicleta)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+29073 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE public.ALUGA ADD CONSTRAINT bicicleta_aluga_fk
+FOREIGN KEY (cod_bicicleta)
+REFERENCES public.BICICLETA (cod_bicicleta)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+29073 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE public.CLIENTE ADD CONSTRAINT pessoa_cliente_fk
+FOREIGN KEY (cod_pessoa)
+REFERENCES public.PESSOA (cod_pessoa)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+29073 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE public.FUNCIONARIO ADD CONSTRAINT pessoa_funcionario_fk
+FOREIGN KEY (cod_pessoa)
+REFERENCES public.PESSOA (cod_pessoa)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+29073 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE public.TELEFONE_PESSOA ADD CONSTRAINT pessoa_telefone_fk
+FOREIGN KEY (cod_pessoa)
+REFERENCES public.PESSOA (cod_pessoa)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+29073 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE public.ENDERECO_PESSOA ADD CONSTRAINT pessoa_enderecos_fk
+FOREIGN KEY (cod_pessoa)
+REFERENCES public.PESSOA (cod_pessoa)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+29073 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE public.ALUGA ADD CONSTRAINT funcionario_aluga_fk
+FOREIGN KEY (cod_func)
+REFERENCES public.FUNCIONARIO (cod_func)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+29073 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE public.ALUGA ADD CONSTRAINT cliente_aluga_fk
+FOREIGN KEY (cod_cli)
+REFERENCES public.CLIENTE (cod_cli)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+29088 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - The list size is :44
+31635 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - SQL_FILE_FILTER:SQL Script Files:[sql, ddl]
+0    [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ArchitectUtils  - Log4J configured successfully
+1156 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+1281 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+1281 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+1391 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+4533 [Thread-5] ERROR ca.sqlpower.architect.swingui.action.CheckForUpdateAction  - Fail to retrieve current version number!
+9673 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+CREATE TABLE public.dim_data (
+                sk_data INTEGER NOT NULL,
+                nk_data DATE NOT NULL,
+                desc_data_completa VARCHAR(60) NOT NULL,
+                nr_ano INTEGER NOT NULL,
+                nm_trimestre VARCHAR(20) NOT NULL,
+                nr_ano_trimestre VARCHAR(20) NOT NULL,
+                nr_mes INTEGER NOT NULL,
+                nm_mes VARCHAR(20) NOT NULL,
+                ano_mes VARCHAR(20) NOT NULL,
+                nr_semana INTEGER NOT NULL,
+                ano_semana VARCHAR(20) NOT NULL,
+                nr_dia INTEGER NOT NULL,
+                nr_dia_ano INTEGER NOT NULL,
+                nm_dia_semana VARCHAR(20) NOT NULL,
+                flag_final_semana CHAR(3) NOT NULL,
+                flag_feriado CHAR(3) NOT NULL,
+                nm_feriado VARCHAR(60) NOT NULL,
+                etl_dt_inicio TIMESTAMP NOT NULL,
+                etl_dt_fim TIMESTAMP NOT NULL,
+                CONSTRAINT sk_data_pk PRIMARY KEY (sk_data)
+)
+9673 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE SEQUENCE public.dim_filial_sk_filial_seq
+9673 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE public.dim_filial (
+                sk_filial INTEGER NOT NULL DEFAULT nextval('public.dim_filial_sk_filial_seq'),
+                nk_filial INTEGER NOT NULL,
+                nm_filial VARCHAR(50) NOT NULL,
+                etl_versao INTEGER NOT NULL,
+                etl_dt_inicio DATE NOT NULL,
+                etl_dt_fim DATE NOT NULL,
+                CONSTRAINT sk_filial PRIMARY KEY (sk_filial)
+)
+9673 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+ALTER SEQUENCE public.dim_filial_sk_filial_seq OWNED BY public.dim_filial.sk_filial
+9673 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE SEQUENCE public.dim_funcionario_sk_funcionario_seq
+9689 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE public.dim_funcionario (
+                sk_funcionario INTEGER NOT NULL DEFAULT nextval('public.dim_funcionario_sk_funcionario_seq'),
+                nk_funcionario INTEGER NOT NULL,
+                nm_funcionario VARCHAR(50) NOT NULL,
+                etl_versao INTEGER NOT NULL,
+                etl_dt_fim DATE NOT NULL,
+                etl_dt_inicio DATE NOT NULL,
+                CONSTRAINT sk_funcionario PRIMARY KEY (sk_funcionario)
+)
+9689 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+ALTER SEQUENCE public.dim_funcionario_sk_funcionario_seq OWNED BY public.dim_funcionario.sk_funcionario
+9689 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE SEQUENCE public.dim_bicicleta_sk_bicicleta_seq
+9689 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE public.dim_bicicleta (
+                sk_bicicleta INTEGER NOT NULL DEFAULT nextval('public.dim_bicicleta_sk_bicicleta_seq'),
+                nk_bicicleta INTEGER NOT NULL,
+                valor_loc_bicicleta NUMERIC(10,2) NOT NULL,
+                marca VARCHAR(50) NOT NULL,
+                modelo VARCHAR(50) NOT NULL,
+                tipo VARCHAR(50) NOT NULL,
+                etl_versao INTEGER NOT NULL,
+                etl_dt_inicio DATE NOT NULL,
+                etl_dt_fim DATE NOT NULL,
+                CONSTRAINT sk_bicicleta PRIMARY KEY (sk_bicicleta)
+)
+9689 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+ALTER SEQUENCE public.dim_bicicleta_sk_bicicleta_seq OWNED BY public.dim_bicicleta.sk_bicicleta
+9689 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE public.ft_locacao_bike (
+                sk_funcionario INTEGER NOT NULL,
+                sk_bicicleta INTEGER NOT NULL,
+                sk_filial INTEGER NOT NULL,
+                sk_data INTEGER NOT NULL,
+                dd_hr_locacao TIME NOT NULL,
+                md_tempo_locacao INTEGER NOT NULL,
+                md_desconto REAL NOT NULL,
+                md_valor_loacao REAL NOT NULL
+)
+9689 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+ALTER TABLE public.ft_locacao_bike ADD CONSTRAINT dim_data_ft_locacao_bike_fk
+FOREIGN KEY (sk_data)
+REFERENCES public.dim_data (sk_data)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+9689 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE public.ft_locacao_bike ADD CONSTRAINT dim_filial_ft_locacao_bike_fk
+FOREIGN KEY (sk_filial)
+REFERENCES public.dim_filial (sk_filial)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+9689 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE public.ft_locacao_bike ADD CONSTRAINT dim_funcionario_ft_locacao_bike_fk
+FOREIGN KEY (sk_funcionario)
+REFERENCES public.dim_funcionario (sk_funcionario)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+9689 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE public.ft_locacao_bike ADD CONSTRAINT dim_bicicleta_ft_locacao_bike_fk
+FOREIGN KEY (sk_bicicleta)
+REFERENCES public.dim_bicicleta (sk_bicicleta)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+9689 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - The list size is :15
+11392 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - SQL_FILE_FILTER:SQL Script Files:[sql, ddl]

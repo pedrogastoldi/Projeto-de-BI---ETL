@@ -1,0 +1,10 @@
+insert into ENDERECO_FILIAL (cod_endereco_fil, tipo_log, logradouro, numero, complemento, bairro, UF, CEP, cod_pessoa) values (1, 'Av', 'Blaine', '57758', 'Street', 'Avenue', 'AZ', '85062', 262);
+insert into ENDERECO_FILIAL (cod_endereco_fil, tipo_log, logradouro, numero, complemento, bairro, UF, CEP, cod_pessoa) values (2, 'Rua', 'Bartelt', '6', 'Alley', 'Park', 'AZ', '85754', 94);
+insert into ENDERECO_FILIAL (cod_endereco_fil, tipo_log, logradouro, numero, complemento, bairro, UF, CEP, cod_pessoa) values (3, 'Rua', 'Russell', '85', 'Alley', 'Drive', 'AZ', '85271', 712);
+insert into ENDERECO_FILIAL (cod_endereco_fil, tipo_log, logradouro, numero, complemento, bairro, UF, CEP, cod_pessoa) values (4, 'Travessa', 'Kensington', '74445', 'Way', 'Street', 'AZ', '85271', 816);
+insert into ENDERECO_FILIAL (cod_endereco_fil, tipo_log, logradouro, numero, complemento, bairro, UF, CEP, cod_pessoa) values (5, 'Av', 'David', '584', 'Center', 'Hill', 'AZ', '85010', 910);
+insert into ENDERECO_FILIAL (cod_endereco_fil, tipo_log, logradouro, numero, complemento, bairro, UF, CEP, cod_pessoa) values (6, 'Travessa', 'Merry', '00', 'Park', 'Parkway', 'AZ', '85099', 11);
+insert into ENDERECO_FILIAL (cod_endereco_fil, tipo_log, logradouro, numero, complemento, bairro, UF, CEP, cod_pessoa) values (7, 'Av', 'Autumn Leaf', '61627', 'Terrace', 'Hill', 'AZ', '85062', 71);
+insert into ENDERECO_FILIAL (cod_endereco_fil, tipo_log, logradouro, numero, complemento, bairro, UF, CEP, cod_pessoa) values (8, 'Travessa', 'Ridge Oak', '50', 'Junction', 'Place', 'AZ', '85053', 294);
+insert into ENDERECO_FILIAL (cod_endereco_fil, tipo_log, logradouro, numero, complemento, bairro, UF, CEP, cod_pessoa) values (9, 'Av', 'Huxley', '4', 'Junction', 'Place', 'AZ', '85705', 54);
+insert into ENDERECO_FILIAL (cod_endereco_fil, tipo_log, logradouro, numero, complemento, bairro, UF, CEP, cod_pessoa) values (10, 'Travessa', 'Nelson', '1', 'Point', 'Parkway', 'AZ', '85260', 58);

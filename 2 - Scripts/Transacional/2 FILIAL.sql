@@ -1,0 +1,10 @@
+insert into FILIAL (cod_filial, CNPJ, nome) values (1, '2599436265', 'Lemke Group');
+insert into FILIAL (cod_filial, CNPJ, nome) values (2, '5863131535', 'Kunze, McCullough and Kirlin');
+insert into FILIAL (cod_filial, CNPJ, nome) values (3, '0911097643', 'Pouros Inc');
+insert into FILIAL (cod_filial, CNPJ, nome) values (4, '0544276612', 'Reichert Group');
+insert into FILIAL (cod_filial, CNPJ, nome) values (5, '0110895193', 'Metz, Mohr and Koss');
+insert into FILIAL (cod_filial, CNPJ, nome) values (6, '6372607530', 'Gulgowski-Batz');
+insert into FILIAL (cod_filial, CNPJ, nome) values (7, '5678672835', 'Morissette, Schmeler and Daugherty');
+insert into FILIAL (cod_filial, CNPJ, nome) values (8, '9494374479', 'Mayer Inc');
+insert into FILIAL (cod_filial, CNPJ, nome) values (9, '1477083383', 'Kuhic Group');
+insert into FILIAL (cod_filial, CNPJ, nome) values (10, '3265081087', 'Runte-Ward');

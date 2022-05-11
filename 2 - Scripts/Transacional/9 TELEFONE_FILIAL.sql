@@ -1,0 +1,10 @@
+insert into TELEFONE_FILIAL (cod_tel_fil, DDD, telefone, cod_pessoa) values (1, 83, '(992) 7056294', 549);
+insert into TELEFONE_FILIAL (cod_tel_fil, DDD, telefone, cod_pessoa) values (2, 53, '(411) 4929368', 81);
+insert into TELEFONE_FILIAL (cod_tel_fil, DDD, telefone, cod_pessoa) values (3, 80, '(295) 7206214', 254);
+insert into TELEFONE_FILIAL (cod_tel_fil, DDD, telefone, cod_pessoa) values (4, 91, '(402) 2046407', 793);
+insert into TELEFONE_FILIAL (cod_tel_fil, DDD, telefone, cod_pessoa) values (5, 66, '(691) 2794926', 915);
+insert into TELEFONE_FILIAL (cod_tel_fil, DDD, telefone, cod_pessoa) values (6, 72, '(197) 5120834', 519);
+insert into TELEFONE_FILIAL (cod_tel_fil, DDD, telefone, cod_pessoa) values (7, 14, '(805) 8071767', 763);
+insert into TELEFONE_FILIAL (cod_tel_fil, DDD, telefone, cod_pessoa) values (8, 37, '(623) 4201251', 894);
+insert into TELEFONE_FILIAL (cod_tel_fil, DDD, telefone, cod_pessoa) values (9, 20, '(993) 8540676', 790);
+insert into TELEFONE_FILIAL (cod_tel_fil, DDD, telefone, cod_pessoa) values (10, 43, '(177) 4527461', 383);
